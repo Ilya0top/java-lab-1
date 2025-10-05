@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run tests with Gradle
-        run: ./gradlew test
+        run: gradle test
 
       - name: Upload test reports
         uses: actions/upload-artifact@v4
