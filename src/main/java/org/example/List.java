@@ -7,10 +7,17 @@ import java.util.Objects;
  * Позволяет хранить произвольное количество объектов.
  *
  * @param <T> тип элементов в контейнере
+ * @author ilabe
+ * @version 1.0
  */
 
 public class List<T>
 {
+    /**
+     * Внутренний класс узла связного списка.
+     *
+     * @param <T> тип данных узла
+     */
     private static class Node<T>
     {
         T data;

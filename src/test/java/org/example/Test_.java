@@ -3,6 +3,13 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Набор unit-тестов для проверки функциональности кастомного контейнера List.
+ * Тестирует основные операции, граничные случаи и обработку исключений.
+ *
+ * @author ilabe
+ * @version 1.0
+ */
 public class Test_ {
 
     @Test
@@ -112,6 +119,10 @@ public class Test_ {
         assertEquals("last", list.getLast());
     }
 
+    /**
+     * Тестирует обработку исключений при обращении к неверному индексу.
+     * Проверяет что get() бросает IndexOutOfBoundsException для пустого списка.
+     */
     @Test
     void testGetInvalidIndexThrowsException()
     {
@@ -121,6 +132,10 @@ public class Test_ {
         });
     }
 
+    /**
+     * Тестирует обработку исключений при получении последнего элемента пустого списка.
+     * Проверяет что getLast() бросает IllegalStateException для пустого списка.
+     */
     @Test
     void testGetLastEmptyListThrowsException()
     {
